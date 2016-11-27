@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  LogIn
+//  LoginAndRegister
 //
-//  Created by admin on 01/10/16.
+//  Created by admin on 22/11/2016.
 //  Copyright © 2016 Vik Nikolova. All rights reserved.
 //
 
@@ -19,9 +19,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "loginView", sender: self);
+        self.performSegue(withIdentifier: "loginView", sender: self)
     }
 }
 
