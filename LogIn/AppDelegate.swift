@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LoginAndRegister
+//  LogIn
 //
-//  Created by admin on 22/11/2016.
+//  Created by admin on 01/10/16.
 //  Copyright © 2016 Vik Nikolova. All rights reserved.
 //
 
