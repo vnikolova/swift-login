@@ -44,27 +44,29 @@ class RegisterPageViewController: UIViewController {
         //check if passwords match
         if (userPassword != repeatPassword) {
             //display alert message
-            displayAlert(message: "Passwords do not match.");
+            displayAlert(message: "You messed up the password.");
         } else {
-        
+
+        //save data
             let record = CKRecord(recordType: "myUsers")
             record.setValue(userEmail, forKey: "email")
             record.setValue(userPassword, forKey: "password")
             db.save(record) { (record:CKRecord?, error:Error?) in
-                // 4. update GUI
                 if error == nil {
-                    print("registered")
+                    print("Registered")
 
                 } else {
                     print("error: \(error)")
                 }
             }
+            //back to login
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
     
     func displayAlert(message: String){
-        let myAlert = UIAlertController(title:"Alert", message: message, preferredStyle: UIAlertControllerStyle.alert);
+        let myAlert = UIAlertController(title:"Oops.", message: message, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil);
         
         myAlert.addAction(okAction);
